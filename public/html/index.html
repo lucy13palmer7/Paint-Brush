@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Flint’z Skinz</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-  </head>
-  <body id="doodleBG">
-     <!--  -->
-<nav>
-   <div class="nav-wrapper ">
-    <a href="#" class="brand-logo">Logo</a>
-   <div class="wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Flint’z Skinz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
 
-       <div class="toolbar">
-         <a id="numDis"> Flint’z Skinz</a>
-         <a id="test"> SAVE</a>
-         <a> BRUSH</a>
-      <button id="go">Execute</button>
-      <button id="clean">Clear Canvas</button>
-      <button id="rec">Record a Video</button>
-      <button id="save">Save Recording</button>
-    </div>
+<body onresize="canvasCenter()" id="doodleBG">
 
+ <!-- used to hide the canvas during modal -->
+<div id="canvasStyle"></div>
 
-      
-
-
-      
+  <!-- nav bar with title -->
+  <nav>
+    <div class="nav-wrapper light-blue lighten-1">
+      <a href="#" class="brand-logo center">Flint’z Skinz</a>
     </div>
   </nav>
-<!--  -->
-      <div id="img-data-div">
-        <a href="#" id="img-file" download="image.png">Download Image</a>
-        <a href="#" id="img-saveNewNew" onclick="saveNewUserImg()"
-          >saveNew Image</a
-        >
-      </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../js/index.js"></script>
-  </body>
+<div id="imgTests"></div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-stuff">
+      <span class="close">&times;</span>
+      <div id="loadBtns"></div>
+    </div>
+  </div>
+
+<!-- tool bar -->
+<div id="toolTray">
+  <button class="toolBtn" id="clean">Clear</button>
+  <button class="toolBtn" id="rec">Record</button>
+  <button class="toolBtn" id="executeBtn">Play</button>
+  <button class="toolBtn" id="saveImage">Save</button class="toolBtn">
+  <button class="toolBtn" id="modalOpen">Load</button class="toolBtn">
+  <button class="toolBtn" id="downloadBtn" download="painting.png">Download</button class="toolBtn">
+</div>
+
+<div id="colorTray">
+  <div class="colorTag" id="red" style="background: red;"></div>
+  <div class="colorTag" id="orange" style="background: orange;"></div>
+  <div class="colorTag" id="yellow" style="background: yellow;"></div>
+  <div class="colorTag" id="green" style="background: green;"></div>
+  <div class="colorTag" id="blue" style="background: blue;"></div>
+  <div class="colorTag" id="purple" style="background: purple;"></div>
+  <div class="colorTag" id="black" style="background: black;"></div>
+</div>
+  
+<footer class="page-footer red accent-2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">
+          <a class="white-text" href="https://github.com/c-frog/Paint-Brush">Visit Our Github Here</a>
+        </h5>
+        <blockquote>
+        "True art is characterized by an irresistible urge in the creative artist" ~ Albert Einstein
+        </blockquote>
+      </div>
+      <div class="col l4 offset-l2 s12">
+      <h5 class="white-text">Powered by Magic, developed by Skeleton Crew feat. lil stylZ</h5>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2020 Copyright
+    </div>
+  </div>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
 </html>
